@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+
+  hi-rabbit:
+    image: hyperf/hyperf:8.1-alpine-v3.15-swoole
+    hostname: hi-rabbit
+    container_name: hi-rabbit
+    volumes:
+      - $PWD:/opt/www
+    working_dir: /opt/www
+    ports:
+      - "9602:9602"
+    networks:
+      - dev-server-net
+      - rabbit-network
+    tty: true
+    entrypoint:
+      - php
+      - bin/hyperf.php
+      - start
+
+networks:
+  dev-server-net:
+    external: true
+  rabbit-network:
+    external: true

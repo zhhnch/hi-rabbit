@@ -1,0 +1,10 @@
+.idea/
+.git/
+vendor/
+runtime/
+upload/
+download/
+.env
+tool/
+app/Cert/
+.DS_Store
