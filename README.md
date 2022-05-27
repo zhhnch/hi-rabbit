@@ -1,0 +1,2 @@
+# hi-rabbit
+hyperf rabbitmq
